@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "functions": {
+    "api/nfc/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/nfc/?",
+      "dest": "/api/nfc/index.js"
+    },
+    {
+      "src": "/nfc/(.*)",
+      "dest": "/api/nfc/$1.js"
+    }
+  ]
+}
